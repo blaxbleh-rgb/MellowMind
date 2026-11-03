@@ -1,9 +1,3 @@
-"""Mellowmind backend: accounts, mood-based songs, and recommendations that learn from likes and skips.
-
-Run from the backend folder (after load_data.py and train_model.py):
-    python app.py
-Then open http://127.0.0.1:5000 in your browser.
-"""
 import os
 import random
 import secrets
@@ -340,4 +334,8 @@ def frontend_files(filename):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(
+        host="0.0.0.0",
+        port=int(os.environ.get("PORT", 5000)),
+        debug=False
+    )

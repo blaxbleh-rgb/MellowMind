@@ -1,4 +1,3 @@
-// Moods shown on the dashboard
 const MOODS = [
   { id: 'sunny', label: 'Sunny', hint: 'bright and open' },
   { id: 'tender', label: 'Tender', hint: 'soft and close' },

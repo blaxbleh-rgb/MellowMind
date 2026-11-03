@@ -1,9 +1,3 @@
-"""Run this once to build songs.db from the Kaggle CSV.
-
-Usage (from the backend folder):
-    python load_data.py
-    python load_data.py --check     # also prints the average audio values per label
-"""
 import sqlite3
 import sys
 from pathlib import Path

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mellowmind recommends music based on your mood." />
+  <title>Mellowmind</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Login -->
+  <main class="login-view" id="login-view">
+    <form class="login-card" id="login-form">
+      <h1>Mellowmind</h1>
+      <p class="tagline">Music for how you feel today.</p>
+
+      <label for="email">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" autocomplete="email" required />
+
+      <label for="password">Password</label>
+      <input id="password" type="password" placeholder="At least 8 characters" minlength="8" autocomplete="current-password" required />
+
+      <p class="form-error" id="form-error" role="alert"></p>
+
+      <button class="primary" type="submit">Log in</button>
+      <button class="link" type="button" id="register-button">New here? Create an account</button>
+    </form>
+  </main>
+
+  <!-- Dashboard -->
+  <div class="dashboard-view is-hidden" id="dashboard-view">
+    <header class="top-bar">
+      <strong class="brand">Mellowmind</strong>
+      <nav class="tabs" aria-label="Sections">
+        <button class="tab" id="tab-discover" type="button" aria-pressed="true">Discover</button>
+        <button class="tab" id="tab-history" type="button" aria-pressed="false">History</button>
+      </nav>
+      <div class="user">
+        <span id="profile-email"></span>
+        <button class="link" id="logout-button" type="button">Log out</button>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <!-- Discover -->
+      <section id="discover-panel">
+        <p class="date" id="current-date"></p>
+        <h1>How are you feeling today?</h1>
+
+        <div class="mood-grid" id="mood-grid" role="group" aria-label="Choose a mood"></div>
+
+        <h2 id="results-title"></h2>
+        <p class="status" id="status" role="status"></p>
+        <ol class="track-list" id="track-list"></ol>
+        <button class="secondary is-hidden" id="more-button" type="button">Show different songs</button>
+      </section>
+
+      <!-- History -->
+      <section class="is-hidden" id="history-panel">
+        <h1>History</h1>
+        <p class="subtitle">Your last 10 songs: ones you liked or skipped.</p>
+        <p class="status" id="history-status" role="status"></p>
+        <ol class="track-list" id="history-list"></ol>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

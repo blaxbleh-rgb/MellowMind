@@ -1,0 +1,31 @@
+Accuracy on 55,588 unseen songs: 93.3%
+(Always guessing the most common emotion would score 38.3%)
+
+              precision    recall  f1-score   support
+
+         sad      0.934     0.924     0.929     16412
+       happy      0.952     0.917     0.934     21286
+   energetic      0.884     0.947     0.915      9413
+        calm      0.941     0.974     0.957      8477
+
+    accuracy                          0.933     55588
+   macro avg      0.928     0.940     0.934     55588
+weighted avg      0.934     0.933     0.933     55588
+
+Confusion matrix (rows = real emotion, columns = predicted):
+                pred sad  pred happy  pred energetic  pred calm
+true sad           15161         577             217        457
+true happy           770       19518             947         51
+true energetic       112         375            8917          9
+true calm            198          22               3       8254
+
+Which audio values matter most (drop in accuracy when shuffled):
+instrumentalness    0.227
+energy              0.194
+acousticness        0.145
+danceability        0.115
+speechiness         0.063
+valence             0.051
+loudness            0.037
+tempo               0.021
+liveness            0.009

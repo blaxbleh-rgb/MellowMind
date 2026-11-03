@@ -1,14 +1,3 @@
-"""Trains Mellowmind's mood model with scikit-learn and scores every song.
-
-Run from the backend folder, after load_data.py:
-    python train_model.py
-
-What it does:
-  1. Trains a classifier that predicts a song's emotion (the dataset's labels 0-3) from its audio values.
-  2. Prints how accurate it is on songs it has never seen (also saved to model_report.txt).
-  3. Uses the model's probabilities to score every song for each app mood (sunny, tender, ...).
-  4. Saves the model to model.joblib and the scores to the song_scores table in songs.db.
-"""
 import sqlite3
 import sys
 from pathlib import Path
